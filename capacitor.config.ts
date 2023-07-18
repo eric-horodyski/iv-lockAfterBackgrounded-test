@@ -1,12 +1,12 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'iv-lockAfterBackgrounded-test',
-  webDir: 'dist',
+  appId: "io.ionic.vaultTest",
+  appName: "Identity Vault Test",
+  webDir: "dist",
   server: {
-    androidScheme: 'https'
-  }
+    androidScheme: "https",
+  },
 };
 
 export default config;
