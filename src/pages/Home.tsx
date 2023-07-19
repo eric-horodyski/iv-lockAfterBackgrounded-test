@@ -25,7 +25,7 @@ const vault = new Vault({
 
 const Home: React.FC = () => {
   const [presentAlert] = useIonAlert();
-
+  
   return (
     <IonPage>
       <IonHeader>
@@ -50,6 +50,18 @@ const Home: React.FC = () => {
         </IonButton>
         <IonButton
           onClick={() => {
+            while (1) {
+              const box = document.createElement("div");
+              box.id = "box" + Math.random();
+              document.body.appendChild(box);
+              console.log(`created div ${box.id}`);
+            }
+          }}
+        >
+          Crash
+        </IonButton>
+        <IonButton
+          onClick={() => {
             void vault.getValue("testkey").then((value) => {
               void presentAlert(value);
             });
@@ -57,6 +69,7 @@ const Home: React.FC = () => {
         >
           Get Data
         </IonButton>
+        <div id="div1">The page shown at {Date.now()}.</div>
       </IonContent>
     </IonPage>
   );
